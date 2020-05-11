@@ -1,0 +1,22 @@
+#products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 576px) { 
+    
+        #products-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+        #products-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+ 

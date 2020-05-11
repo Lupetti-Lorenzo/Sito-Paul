@@ -1,0 +1,45 @@
+@import "../../scss/flex-center.scss" ;
+@import "../../scss/wrapper.scss";
+
+header {
+    padding: 1rem 0 0 0;
+    width: 100%;
+
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 70px;
+        background-color: transparent;
+        width: 100%;
+        font-size: 1.5rem;
+    
+        i {
+            padding: .2rem;
+            margin: .8rem;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+    
+        #menu {
+            display: flex;
+            align-items: center;
+            width: 33.333%;
+        }
+    
+        #logo {
+            @extend .flex-center;
+            justify-self: center;
+            margin: 0 auto;
+        }
+    
+        #shoppingCart {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 33.333%;
+        }
+    }
+}
+
+

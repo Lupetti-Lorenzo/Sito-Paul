@@ -1,0 +1,61 @@
+@import "../../scss/flex-center.scss" ;
+@import "../../scss/wrapper.scss";
+
+#newsletter-container {
+    width: 100%;
+    margin-top: 4rem;
+    padding: 3rem 1rem;
+    background-color: rgb(222, 218, 218);
+
+    #newsletter-content {
+        @extend .flex-center;
+        flex-direction: column;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-align: center;
+
+        p { margin-top: 1rem; } 
+
+        #newsletter-form {
+            margin-top: 3rem;
+            padding: .5rem;
+            background-color: white;
+            max-width: 500px;
+            width: 100%;
+
+            #imput-group {
+                display: flex;
+                height: 2rem;
+
+                * { text-transform: uppercase; }
+
+                button {
+                    padding: .3rem 1rem;
+                    border: none;
+                    margin-left: .5rem;
+                    background-color: #04c114;
+                    color: white;
+                    border-radius: .15rem;
+                    transition: .3s;
+                    border: 1px solid #04c114;
+
+                    &:hover {
+                        background-color: white;
+                        color: #04c114; 
+                    }
+                }
+                
+                
+                
+                input {
+                    flex-grow: 1;
+                    border: none;
+                    padding-left: 1rem;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+    
+}
