@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Product from "../product/product"
-import SHOP_DATA from "./shop.data"
+import SHOP_DATA, { objProducts } from "./shop.data"
 
 import "./products-grid.scss"
 
@@ -11,22 +11,26 @@ class ProductsGrid extends React.Component {
         super(props)
 
         this.state = {
-            collections: SHOP_DATA
+            collections: SHOP_DATA,
+            products: objProducts
         }
     }
 
-    render() {
-        const {collections} = this.state
+        
         //i create a new array and put every item of every collection in it
-        let arrayProducts = []
-        collections.forEach(collection => collection.items.forEach(product => arrayProducts.push(product)))
+
+    render() {
+        
+        let arrayProducts = this.state.products
+
         //if a category is selected i filter the array
-        if(this.props.filterBy !== "All") {
-            arrayProducts = arrayProducts.filter(product => product.category === this.props.filterBy)           
+        if(this.props.filterProducts !== "All") {
+            arrayProducts = arrayProducts.filter(product => product.category === this.props.filterProducts)           
         }
+
         //if a sort option is selected i sort the array
-        if(this.props.sortBy !== "0") {
-            this.props.sortBy === "+" ? 
+        if(this.props.sortProducts !== "0") {
+            this.props.sortProducts === "+" ? 
             arrayProducts.sort((a, b) => parseFloat(b.price) - parseFloat(a.price)) 
             : arrayProducts.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
         }

@@ -4,6 +4,9 @@ import { Route } from "react-router-dom"
 import Header from "../header/header"
 import LandingPage from "../../pages/landingPage/landingPage"
 import ProductsPage from "../../pages/productsPage/productsPage"
+import ProductInfos from "../productInfos/productInfos"
+
+import { objProducts } from "../products-grid/shop.data"
 
 import "./main.scss"
 
@@ -27,6 +30,16 @@ export default function Main( { menuActive, shoppingActive, toggleShopping, togg
             <Header />
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/products" component={ProductsPage} />
+            {
+                objProducts.map((product, i) => {
+                    return (
+                        <Route key={i}  path={"/products/" + product.name}>
+                            <ProductInfos {...product}/>
+                        </Route>
+                    )
+                })
+            }
+            {/*page not found  <Route path="/" component={} /> */}
         </div>
     )
 }

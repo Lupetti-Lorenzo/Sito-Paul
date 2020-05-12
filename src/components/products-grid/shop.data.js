@@ -5,21 +5,21 @@ const SHOPDATA = [
       items: [
         {
           id: 1,
-          name: 'Brown Brim',
+          name: 'Brown',
           imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
           price: 25,
           category: "Hoodie"
         },
         {
           id: 2,
-          name: 'ngga Brim',
+          name: 'nggaaazzz',
           imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
           price: 21,
           category: "Hoodie"
         },
         {
           id: 2,
-          name: 'ngga Brim',
+          name: 'nggaaa',
           imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
           price: 24,
           category: "Jeans"
@@ -32,14 +32,14 @@ const SHOPDATA = [
       items: [
         {
           id: 1,
-          name: 'Brown Brim',
+          name: 'Brownnnnn',
           imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
           price: 23,
           category: "Tees"
         },
         {
           id: 2,
-          name: 'ngga Brim',
+          name: 'nbba',
           imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
           price: 24,
           category: "Jeans"
@@ -47,5 +47,8 @@ const SHOPDATA = [
       ]
     }
   ]
+
+  export let objProducts = []
+  SHOPDATA.forEach(collection => collection.items.forEach(product => objProducts.push(product)))
 
   export default SHOPDATA
