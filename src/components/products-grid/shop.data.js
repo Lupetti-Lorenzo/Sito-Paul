@@ -23,6 +23,13 @@ const SHOPDATA = [
           imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
           price: 24,
           category: "Jeans"
+        },
+        {
+          id: 9,
+          name: 'bella liiii vai cosiiiiiiiiiiiiii',
+          imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
+          price: 24,
+          category: "Jeans"
         }
       ]
     },

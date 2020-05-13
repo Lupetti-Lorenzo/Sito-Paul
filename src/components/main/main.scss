@@ -1,26 +1,26 @@
 .menuActive {
     margin-left: 300px;
     margin-right: -300px;
-    transition: .5s;
+    transition: .3s;
 }
 
 .shoppingActive {
-    margin-right: 300px;
-    margin-left: -300px;
-    transition: .5s;
+    margin-right: 400px;
+    margin-left: -400px;
+    transition: .3s;
 }
 .notActive {
     margin-left: 0px;
     margin-right: 0px;
-    transition: .5s;
+    transition: .3s;
 }
 
 //il menu e piu piccolo nei telefoni
 @media screen and (max-width: 576px) {
-    .shoppingActive { margin-right: 200px; margin-left: -200px;}
+    .shoppingActive { margin-right: 250px; margin-left: -250px;}
 }
 
 //il menu e piu piccolo nei telefoni
 @media screen and (max-width: 576px) {
-    .menuActive { margin-left: 200px; margin-right: -200px;}
+    .menuActive { margin-left: 250px; margin-right: -250px;}
 }

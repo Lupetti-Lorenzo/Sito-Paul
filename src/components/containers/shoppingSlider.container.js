@@ -4,7 +4,7 @@ import ShoppingCart from "../shoppingCart/shoppingCart"
 const mapStateToProps = state => {
     return {
       active: state.toggleShopping,
-      cart: state.cart
+      cartItems: state.cart
     }
   }
 
