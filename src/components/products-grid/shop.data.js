@@ -18,7 +18,7 @@ const SHOPDATA = [
           category: "Hoodie"
         },
         {
-          id: 2,
+          id: 3,
           name: 'nggaaa',
           imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
           price: 24,
@@ -27,18 +27,18 @@ const SHOPDATA = [
       ]
     },
     {
-      id: 1,
+      id: 2,
       title: 'seconda collezione',
       items: [
         {
-          id: 1,
+          id: 4,
           name: 'Brownnnnn',
           imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
           price: 23,
           category: "Tees"
         },
         {
-          id: 2,
+          id: 5,
           name: 'nbba',
           imageUrl: 'https://cdn.shopify.com/s/files/1/1426/7942/products/HOODIE-BALLOUT-WHITE_370x.png?v=1548190465',
           price: 24,

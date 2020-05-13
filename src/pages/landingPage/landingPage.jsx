@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 
 import "./landingPage.scss"
 
+//root page with image at the center and a button to go to products page
 export default function LandingPage() {
     return (
         <main>

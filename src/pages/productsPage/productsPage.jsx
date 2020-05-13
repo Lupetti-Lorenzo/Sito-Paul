@@ -6,6 +6,7 @@ import ProductsGrid from "../../components/containers/productsGrid.container"
 import Newsletter from "../../components/newsletter/newsletter"
 import FilterInputs from "../../components/containers/filterInputs.container"
 
+//products page made by filter options, grid of products and newsletter at the bottom
  function ProductsPage() { 
         return (
             <div>

@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function ProductInfos(props) {
 
+
+export default function ProductInfos(props) {
     return (
         <div>
-            <button >Add to cart</button>
+            <button onClick={() => props.addCartItem(props)}>Add to cart</button>
         </div>
     )
 }

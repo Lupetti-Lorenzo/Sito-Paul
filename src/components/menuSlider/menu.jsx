@@ -18,13 +18,13 @@ export default class Menu extends React.Component{
         <div id="sidenav" className={ this.props.active ? "open" : ""}>
         <a href="#">About</a>
         <a href="#">Sales</a>
-        <a href="#">Novitá</a>
+        <Link to="/products" onClick={() => this.props.toggleMenu()}>Products</Link>
         <div className={this.state.productsOpen ? "active" : ""}>
         <p  
         className = {this.state.productsOpen ? "selected" : ""}
         onClick={() => {
           this.setState({productsOpen: !this.state.productsOpen})
-        }}>Products</p>
+        }}>Categories</p>
           <div className="products-links">
             {
               categories.map((cat, i) => (
