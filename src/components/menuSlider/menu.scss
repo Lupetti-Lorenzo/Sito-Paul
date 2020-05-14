@@ -7,36 +7,60 @@
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 2rem; /* Place content 60px from the top */
     transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+    
+    * {
+      color: #818181;
+      transition: 0.3s;
+      &:hover {
+        color: #f1f1f1;
+      }
+    }
 
     &.open {
         width: 300px;
     }
 
     a, p {
-        padding: 8px 8px 8px 28px;
+        padding: 4px 8px 8px 28px;
         text-decoration: none;
         font-size: 25px;
-        color: #818181;
         display: block;
-        transition: 0.3s;
         cursor: pointer;
-
-        &:hover {
-            color: #f1f1f1;
-        }
-        &.selected { color: #f1f1f1; }
       }
+      .selected { color: #f1f1f1; i{color: #f1f1f1;}}
 
-      div {
+      #categories {
+        
+        &:hover {
+          i, >p { color: #f1f1f1; }
+        }
+
         .products-links { 
           display: none;
           padding: .5rem 0 .5rem 1.5rem ;
+
+          li {
+            list-style-type: none;
+            &:hover {
+              color: #f1f1f1;
+            }
+          }
         }
 
         &.active .products-links {
           display: block;
+        }
+        
+        p {
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        i{
+          font-size: 1.2rem;
+          padding-left: 5rem;
         }
       }
 
@@ -49,5 +73,9 @@
   }
 
   @media screen and (max-width: 576px) {
-    #sidenav { &.open {width: 250px}}
+    #sidenav { 
+      &.open {width: 250px}
+      #categories {i{ padding-left: 2.5rem; }}
+    }
+    
   }

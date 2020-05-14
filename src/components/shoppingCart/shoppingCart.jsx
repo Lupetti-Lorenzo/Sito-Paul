@@ -4,11 +4,12 @@ import "./shoppingCart.scss"
 
 import CartItem from "../cartItem/cartItem"
 
-export default function ShoppingCart({ active, cartItems }) {
+export default function ShoppingCart({ active, cartItems, toggleShopping }) {
     return (
         <div id="shoppingSlider" className={ active ? "open" : ""}>
             <div id="padding">
-                <h2><b>Your cart</b></h2>
+                <span id="your-cart"><i /><b>Your cart</b><i class="fas fa-times" onClick={() => toggleShopping()} ></i></span>
+                            
                 {
                     cartItems.map(item => <CartItem key={item.id} { ...item }/>)
                 }

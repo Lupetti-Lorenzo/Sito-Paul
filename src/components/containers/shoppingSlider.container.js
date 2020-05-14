@@ -1,5 +1,7 @@
 import { connect } from 'react-redux'
 import ShoppingCart from "../shoppingCart/shoppingCart"
+import toggleShopping from "../../actions/toggleShopping"
+
 
 const mapStateToProps = state => {
     return {
@@ -8,7 +10,15 @@ const mapStateToProps = state => {
     }
   }
 
+  const mapDispatchToProps = dispatch => {
+    return {      
+      toggleShopping: () => {
+        dispatch(toggleShopping())
+      }
+    }
+  }
 
-const ShoppingSlider = connect(mapStateToProps)(ShoppingCart)
+
+const ShoppingSlider = connect(mapStateToProps, mapDispatchToProps)(ShoppingCart)
 
 export default ShoppingSlider

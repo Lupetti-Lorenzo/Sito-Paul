@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import productInfos from "../productInfos/productInfos"
+import productInfos from "../../pages/productInfos/productInfos"
 
 import addItem from "../../actions/addCartItem"
 import toggleShopping from "../../actions/toggleShopping"
