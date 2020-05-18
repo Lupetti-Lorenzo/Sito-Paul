@@ -16,6 +16,7 @@ export default class Menu extends React.Component{
     render() {
       return (
         <div id="sidenav" className={ this.props.active ? "open" : ""}>
+        <Link to="/" onClick={() => {this.props.toggleMenu()}}>Home</Link>
         <Link href="#">About</Link>
         <Link href="#">Sales</Link>
         <Link to="/products" onClick={() => this.props.toggleMenu()}>Products</Link>
