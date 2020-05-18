@@ -1,5 +1,7 @@
 import React, { Component }  from 'react'
 
+import "./productsInfos.scss"
+
 export default class productInfos extends Component {
     constructor(props) {
         super(props)
