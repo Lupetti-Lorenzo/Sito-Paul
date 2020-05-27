@@ -14,24 +14,41 @@ export default class productInfos extends Component {
     render() {
         const cartProps = {
             id: this.props.id,
-            imageUrl: this.props.imageUrl,
+            imageUrl: this.props.images.front,
             price: this.props.price,
             name: this.props.name,
             size: this.state.size
         }
 
+        const sizes = ['S', 'M', 'L', 'XL']
+
         return (
             <div>
-                <input type="radio" name="size" value="S" onClick={e => {this.setState({size: e.target.value})}}/>
-                <label for="S"> S</label><br/>
-                <input type="radio" name="size" value="M" onClick={e => {this.setState({size: e.target.value})}}/>
-                <label for="M"> M</label><br/>
-                <input type="radio" name="size" value="L" onClick={e => {this.setState({size: e.target.value})}}/>
-                <label for="L"> L</label><br/>
-                <input type="radio" name="size" value="XL" onClick={e => {this.setState({size: e.target.value})}}/>
-                <label for="XL"> XL</label><br/>
+                {
+                    sizes.map((size, i) => {
+                    const notDispo = this.props.disponibility[size] <= 0
+                    return (
+                        <div className='radioSize' key={i}>
+                            <input type="radio" name="size"
+                            value={size} 
+                            onClick={e => {this.setState({size: e.target.value})}}
+                            disabled={notDispo ? true : false}
+                            className={notDispo ? 'notDispo' : 'dispo'}
+                            />
+                            <label htmlFor={size}>{size}{notDispo ? "  out of stock": ''}</label><br/>
+                        </div>
+                    ) 
+                  })
+                }
                 <button disabled={this.state.size ? false : true} className={this.state.size ? "" : "disabled"} //fare classe disabled
                 onClick={() => {this.props.addCartItem(cartProps); this.props.toggleCart()}}>Add to cart</button>
+
+                <div className='img-grid'>
+                    <img src={this.props.images.front} alt="Front"/>
+                    <img src={this.props.images.back} alt="Back"/>
+                    <img src={this.props.images[`${this.state.size ? this.state.size : "S"}front`]} alt="Front Size"/>
+                    <img src={this.props.images[`${this.state.size ? this.state.size : "S"}back`]} alt="Back Size"/>
+                </div>
             </div>
         )
     }

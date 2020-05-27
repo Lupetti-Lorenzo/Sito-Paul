@@ -5,6 +5,8 @@ import SHOP_DATA, { objProducts } from "./shop.data"
 
 import "./products-grid.scss"
 
+
+
 class ProductsGrid extends React.Component { 
      
     constructor(props) {
@@ -12,7 +14,8 @@ class ProductsGrid extends React.Component {
 
         this.state = {
             collections: SHOP_DATA,
-            products: objProducts
+            products: objProducts,
+            page: 1
         }
     }
 
@@ -40,13 +43,16 @@ class ProductsGrid extends React.Component {
         }
 
         return (
-            <div id="products-grid">
-                { 
-                     arrayProducts.map(({ id, ...itemProps }, index) => (
-                        <Product key={ index } { ...itemProps } />
-                    )) 
-                }                 
-            </div>
+            <>
+                <div id="products-grid">
+                    {           
+                        arrayProducts.slice(0, (this.state.page * 12)).map(({ id, ...itemProps }, index) => (
+                            <Product key={ index } { ...itemProps } />
+                        )) 
+                    }                 
+                </div>     
+                <button  onClick={()=> this.setState({page: this.state.page + 1})} >More products</button>    
+            </>
         )
     }
 }

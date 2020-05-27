@@ -1,3 +1,13 @@
 button.disabled {
     opacity: .5;
 }
+
+.img-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1200px;
+    img {
+        width: 370px;
+        height: 370px;
+    }
+}
