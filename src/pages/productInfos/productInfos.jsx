@@ -26,18 +26,17 @@ export default class productInfos extends Component {
             <div>
                 {
                     sizes.map((size, i) => {
-                    const notDispo = this.props.disponibility[size] <= 0
-                    return (
-                        <div className='radioSize' key={i}>
-                            <input type="radio" name="size"
-                            value={size} 
-                            onClick={e => {this.setState({size: e.target.value})}}
-                            disabled={notDispo ? true : false}
-                            className={notDispo ? 'notDispo' : 'dispo'}
-                            />
-                            <label htmlFor={size}>{size}{notDispo ? "  out of stock": ''}</label><br/>
-                        </div>
-                    ) 
+                        const notDispo = this.props.disponibility[size] <= 0
+                        return (
+                            <div className='radioSize' key={i}>
+                                <input type="radio" name="size"
+                                onClick={e => {this.setState({size})}}
+                                disabled={notDispo ? true : false}
+                                className={notDispo ? 'notDispo' : 'dispo'}
+                                />
+                                <label htmlFor={size}>{size}{notDispo ? "  out of stock": ''}</label><br/>
+                            </div>
+                        ) 
                   })
                 }
                 <button disabled={this.state.size ? false : true} className={this.state.size ? "" : "disabled"} //fare classe disabled

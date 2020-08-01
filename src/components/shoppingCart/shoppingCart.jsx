@@ -11,7 +11,7 @@ export default function ShoppingCart({ active, cartItems, toggleShopping }) {
                 <span id="your-cart"><i /><b>Your cart</b><i className="fas fa-times" onClick={() => toggleShopping()} ></i></span>
                             
                 {
-                    cartItems.map(item => <CartItem key={item.id} { ...item }/>)
+                    cartItems.map((item, i) => <CartItem key={i} { ...item }/>)
                 }
             </div>
         </div>

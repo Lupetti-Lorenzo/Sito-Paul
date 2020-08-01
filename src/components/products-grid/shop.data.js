@@ -6,7 +6,7 @@ const SHOPDATA = [
       items: [
         {
           id: 3,
-          name: 'jea',
+          name: 'jeaaaa gjklsaj;aljl vj cxklzx;jxjgkxzl jkflzjg;jgldjg k;',
           price: 25,
           category: "Jeans",
           images: {

@@ -4,6 +4,7 @@ const initialState = {
     sortProducts: null,
     filterProducts: "All"
 }
+
 const setFilters = (state = initialState, action) => {
     if(action.type === SET_SORTING){
         return {

@@ -15,7 +15,7 @@ class ProductsGrid extends React.Component {
         this.state = {
             collections: SHOP_DATA,
             products: objProducts,
-            page: 1
+            prodsDisplayed: 12
         }
     }
 
@@ -41,17 +41,20 @@ class ProductsGrid extends React.Component {
             //if no sort i reverse the array because when add a new collection it comes last
             arrayProducts.reverse()
         }
+        console.log(this.state.prodsDisplayed > arrayProducts.length + " AAAAAAAAÆ")
 
         return (
             <>
                 <div id="products-grid">
                     {           
-                        arrayProducts.slice(0, (this.state.page * 12)).map(({ id, ...itemProps }, index) => (
+                        arrayProducts.slice(0, (this.state.prodsDisplayed)).map(({ id, ...itemProps }, index) => (
                             <Product key={ index } { ...itemProps } />
                         )) 
                     }                 
                 </div>     
-                <button  onClick={()=> this.setState({page: this.state.page + 1})} >More products</button>    
+                <button  onClick={()=> this.setState({prodsDisplayed: this.state.prodsDisplayed + 12})} 
+                className={this.state.prodsDisplayed > arrayProducts.length ? "d-none" : ""}  
+                >More products</button>    
             </>
         )
     }
